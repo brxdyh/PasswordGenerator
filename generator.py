@@ -1,6 +1,7 @@
 # Random Password Generator
 # by brad :p
 
+import string
 import random
 
 # function that shuffles all characters in a string
@@ -26,7 +27,8 @@ lowerLetter4 = chr(random.randint(97, 122))
 num1 = int(random.randint(48, 57))
 
 # generates special character from ASCII code and stores the value
-special_char1 = int(random.randint(33, 64))
+special_characters = string.punctuation
+special_char1 = random.choice(special_characters)
 
 # grabs all generated values and creates a random password with them
 # variable shortened for easier reading
