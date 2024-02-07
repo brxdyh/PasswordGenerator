@@ -1,4 +1,4 @@
-# Random Password Generator
+# random password generator
 # by brad :p
 
 import string
@@ -10,23 +10,28 @@ def shuffle(string):
     random.shuffle(temp)
     return ''.join(temp)
 
-# generate random uppercase letters from ASCII code and stores the values in a variable
-upperLetter1 = chr(random.randint(65, 90))
-upperLetter2 = chr(random.randint(65, 90))
-upperLetter3 = chr(random.randint(65, 90))
-upperLetter4 = chr(random.randint(65, 90))
+# stores all uppercase char ASCII codes and generates random uppercase letters 
+# then stores the values in a variable
+upperChars = string.ascii_uppercase
+upperLetter1 = random.choice(upperChars)
+upperLetter2 = random.choice(upperChars)
+upperLetter3 = random.choice(upperChars)
+upperLetter4 = random.choice(upperChars)
 
-# generate random lowercase letters from ASCII code and stores the values in a variable
-lowerLetter1 = chr(random.randint(97, 122))
-lowerLetter2 = chr(random.randint(97, 122))
-lowerLetter3 = chr(random.randint(97, 122))
-lowerLetter4 = chr(random.randint(97, 122))
+# stores all lowercase char ASCII codes and generates random lowercase letters
+# then stores the values in a variable
+lowerChars = string.ascii_lowercase
+lowerLetter1 = random.choice(lowerChars)
+lowerLetter2 = random.choice(lowerChars)
+lowerLetter3 = random.choice(lowerChars)
+lowerLetter4 = random.choice(lowerChars)
 
-# generate random number from ASCII code and stores the value
-# creates two numbers, cannot figure out why ?
-num1 = int(random.randint(48, 57))
+# stores all digit/integer ASCII codes, generates random chars, and stores the value
+numbers = string.digits
+num1 = random.choice(numbers)
+num2 = random.choice(numbers)
 
-# generates special character from ASCII code and stores the value
+# stores all special char ASCII codes, generates random char, and stores the value
 special_characters = string.punctuation
 special_char1 = random.choice(special_characters)
 
@@ -34,8 +39,9 @@ special_char1 = random.choice(special_characters)
 # variable shortened for easier reading
 upper_letters = upperLetter1 + upperLetter2 + upperLetter3 + upperLetter4
 lower_letters = lowerLetter1 + lowerLetter2 + lowerLetter3 + lowerLetter4
-numbers = str(num1)
-special = str(special_char1)
+numbers = num1 + num2
+special = special_char1
+
 passwd = upper_letters + lower_letters + numbers + special
 passwd = shuffle(passwd)
 
