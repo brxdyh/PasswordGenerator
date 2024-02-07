@@ -1,6 +1,5 @@
 # Random Password Generator
 # by brad :p
-# version 1.0 finished 2/6/24
 
 import random
 
@@ -22,11 +21,20 @@ lowerLetter2 = chr(random.randint(97, 122))
 lowerLetter3 = chr(random.randint(97, 122))
 lowerLetter4 = chr(random.randint(97, 122))
 
+# generate random number from ASCII code and stores the value
+# creates two numbers, cannot figure out why ?
+num1 = int(random.randint(48, 57))
+
+# generates special character from ASCII code and stores the value
+special_char1 = int(random.randint(33, 64))
+
 # grabs all generated values and creates a random password with them
 # variable shortened for easier reading
 upper_letters = upperLetter1 + upperLetter2 + upperLetter3 + upperLetter4
 lower_letters = lowerLetter1 + lowerLetter2 + lowerLetter3 + lowerLetter4
-passwd = upper_letters + lower_letters
+numbers = str(num1)
+special = str(special_char1)
+passwd = upper_letters + lower_letters + numbers + special
 passwd = shuffle(passwd)
 
 # show generated password
