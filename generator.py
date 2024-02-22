@@ -5,14 +5,14 @@ import string
 import random
 
 # function that shuffles all characters in a string
-def shuffle(string):
-    temp = list(string)
+def shuffle(input_string):
+    temp = list(input_string)
     random.shuffle(temp)
     return ''.join(temp)
 
 # stores all uppercase char ASCII codes and generates random uppercase letters 
 # then stores the values in a variable
-upperChars = string.ascii_uppercase
+upperChars = list(string.ascii_uppercase)
 upperLetter1 = random.choice(upperChars)
 upperLetter2 = random.choice(upperChars)
 upperLetter3 = random.choice(upperChars)
@@ -20,7 +20,7 @@ upperLetter4 = random.choice(upperChars)
 
 # stores all lowercase char ASCII codes and generates random lowercase letters
 # then stores the values in a variable
-lowerChars = string.ascii_lowercase
+lowerChars = list(string.ascii_lowercase)
 lowerLetter1 = random.choice(lowerChars)
 lowerLetter2 = random.choice(lowerChars)
 lowerLetter3 = random.choice(lowerChars)
